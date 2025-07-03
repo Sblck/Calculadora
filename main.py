@@ -52,7 +52,10 @@ if __name__ == "__main__":
             num2 = float(input('Digite o segundo número: '))
             resultado = calculadora(num1, num2, operador)
             print(f'Resultado: {resultado}')
-            input('\nPressione Enter para continuar...')
+            continuar = input('\nDeseja fazer outra operação? (s/n): ').strip().lower()
+            if continuar != 's':
+                print('\nA sair...\n')
+                break
 
         except ValueError:
             print('Dados inválidos! -> Tente novamente!')
