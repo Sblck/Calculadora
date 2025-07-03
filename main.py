@@ -16,6 +16,8 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
         result = num1 * num2
     elif operador == '/':
         result = num1 / num2
+    elif operador == '^':
+        result = num1 ** num2
     return result
 
 def menu_operacoes() -> str:
@@ -24,6 +26,7 @@ def menu_operacoes() -> str:
     print('2 - Subtração (-)')
     print('3 - Multiplicação (*)')
     print('4 - Divisão (/)')
+    print('5 - Exponenciação (^)')
     opcao = input('Digite o número da operação desejada: ')
     if opcao == '1':
         return '+'
@@ -33,6 +36,8 @@ def menu_operacoes() -> str:
         return '*'
     elif opcao == '4':
         return '/'
+    elif opcao == '5':
+        return '^'
     else:
         return None
 
